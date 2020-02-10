@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from distutils.core import setup, Extension
+from setuptools import setup, Extension, Command
 import os.path;
 import platform;
 # import numpy as np;

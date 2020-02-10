@@ -32,10 +32,10 @@ setup(
 	version="0.1",
 	author="Filipi N. Silva",
 	author_email="filipi@iu.edu",
-	description="Small python package to read .xnet (compleX NETwork format) files used in my other scripts.",
+	description="Experimental library to analyze complex networks",
 	long_description=long_description,
 	long_description_content_type="text/markdown",
-	url="https://github.com/filipinascimento/xnet",
+	url="https://github.com/filipinascimento/cxnetwork",
 	packages=setuptools.find_packages(),
 	classifiers=[
 			"Programming Language :: Python :: 3",

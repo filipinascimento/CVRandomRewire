@@ -1,4 +1,4 @@
-TARGET = CVRandomWalks
+TARGET = CVRandomRewire
 LIBS = -lm
 DEFINITIONS = 
 CFLAGS = -g -std=c11 -m64 -Wall -Wno-unused-function -Wno-deprecated-declarations -O3 -fvisibility=hidden -funroll-loops -fstrict-aliasing

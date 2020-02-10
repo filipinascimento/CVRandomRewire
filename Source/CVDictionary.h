@@ -40,7 +40,7 @@ CV_INLINE CVSize CVStringDictionaryCount(CVStringDictionaryRef dictionary){
 
 
 typedef struct {
-	CVUInteger* key;
+	CVUInteger key;
 	void* data;
 	UT_hash_handle hh;
 } CVUIntegerDictionaryEntry;
@@ -66,7 +66,7 @@ CV_INLINE CVSize CVUIntegerDictionaryCount(CVUIntegerDictionaryRef dictionary){
 
 
 typedef struct {
-	CVInteger* key;
+	CVInteger key;
 	void* data;
 	UT_hash_handle hh;
 } CVIntegerDictionaryEntry;

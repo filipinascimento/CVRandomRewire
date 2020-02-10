@@ -1,39 +1,23 @@
-# CVRandomWalks
-Fast tool to obtain sentences based on random walks from networks for use in word2vec and other embedding techniques.  
+# cxnetwork
+Experimental library to process and analyze complex networks
 
 ## Requirements
 - C11 compatible compiler (GCC, CLANG)
-- OpenMP or libdispatch (MacOS)
 
 ## Compiling
-Makefile can be used to compile the tool, just type
-
-```
-> cd CVRandomWalks
-> make
-```
-
-The binary files will be generated at `Build_($platform)`.
+run `pip install cxnetwork` on the project directory.
 
 ## Usage
-The walking algorithm uses regular random walks and biased random walks according to node2vec ([https://snap.stanford.edu/node2vec/]).
+```python
+import cxnetwork as cx
+
+cx.randomSeedDev();
+
+edges =  [(0,1),(1,2),(2,3),(3,4),(4,5),(5,6),(6,7),(7,8),(8,9),(9,10),(10,0)]
+edges += [(0,2),(1,3),(2,4),(3,5),(4,6),(5,7),(6,8),(7,9),(8,10),(9,0),(10,1)]
+
+rewiredEdges = cx.rewire(edges,11,0.5);
+
+print(rewiredEdges);
 
 ```
-./CVRandomWalks q p w m network.xnet sentences.txt
-```
-
-- `p` - for p in node2vec walks (1.0 for unbiased) [positive number]
-- `q` - for q in node2vec walks (1.0 for unbiased) [positive number]
-- `w` - length of each walk [positive integer]
-- `m` - of sentences to be generated [positive integer]
-
-Input is in `.xnet` format like in [http://github.com/filipinascimento/xnet]. For python, you can use the `xnetwork` package.
-
-The output is a text with words separated by space and sentences separated new line. It can be used directly on 
-
-## TODO
-- Build a python wrapper based on igraph and/or networkx
-- Include other kinds of walks
-- Better help
-- Error checking
-# CVRandomRewire

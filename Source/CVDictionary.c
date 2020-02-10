@@ -246,7 +246,7 @@ void* CVIntegerDictionaryDeleteEntry(CVIntegerDictionaryRef dictionary, const CV
 
 void* CVIntegerDictionaryDeleteAndFreeEntry(CVIntegerDictionaryRef dictionary, const CVInteger key){
 	CVIntegerDictionaryEntry* entryTemp = NULL;
-	CVInteger replacedData = NULL;
+	void* replacedData = NULL;
 	if(dictionary){
 		HASH_FIND(hh, (*dictionary), &(key), sizeof(CVInteger), entryTemp);
 	}

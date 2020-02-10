@@ -1069,7 +1069,7 @@ CVNetwork* CVNewNetworkFromRandomRewiringEdgeList(CVIndex* fromList,CVIndex* toL
 	HASH_ITER(hh, edgesHash, edgeElement, tempElement) {
 		HASH_DEL(edgesHash, edgeElement);
 		free(edgeElement);
-    }
+	}
 	
 	return theNetwork;
 }

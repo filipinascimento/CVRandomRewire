@@ -1,0 +1,10 @@
+{
+  "files.associations": {
+    "cvrandomrewiring.h": "c",
+    "cvconcentricstructure.h": "c",
+    "libmypy.h": "c",
+    "cvnetwork.h": "c",
+    "pycxnetwork.h": "c",
+    "cvgridutilities.h": "c"
+  }
+}
